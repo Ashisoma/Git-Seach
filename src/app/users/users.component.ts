@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-//import { resolve } from 'dns';
-//import { profile } from 'console';
-//import { from } from 'rxjs';
 import { UsersService } from 'src/app/users.service'
 import { HttpClient } from '@angular/common/http';
 import { Profile, Repo } from '../profile';
