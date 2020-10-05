@@ -1,10 +1,40 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClient, HttpClientModule } from '@angular/common/http'
+//import 'rxjs/add/operator/map';
+import { from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
 
-  constructor(private http: HttpClientModule) { }
+
+  private username:string;
+  private clientid : '2549639557fad239e9e1';
+  private clientsecret:'95c7339715a31f44426a277275da0d3f892b8839';
+
+  constructor(private http: HttpClient) {
+console.log ('we are on!!')
+this.username = 'Ashisoma'
+  
+  }
+
+ 
+getUserProfile(){
+  return this.http.get('https://api.github.com/users/'+this.username+'?client_id'+this.clientid+'&client_secret='+this.clientsecret);
+//   .toPromise().then(data =>{
+//  console.log(data);
+
+//});
 }
+
+  getRepo() {
+    const url = `https://api.github.com/users/${this.username}/repos?client_id=${this.clientid}&client_secret=${this.clientsecret}`
+    return this.http.get(url);
+}
+   updateProfile(username:string){
+     this.username = username
+   }
+ }
+ //return this.http.get('https://api.github.com/search/users?access_token=e3a1b33c1d6d6b20e6ef2b7ce2de6985091c91b6&q=Ashisoma')
+ //`https://api.github.com/users/${this.username}/repos?client_id=${this.clientid}&client_secret=${this.clientsecret}`
