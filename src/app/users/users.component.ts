@@ -22,7 +22,7 @@ export class UsersComponent implements OnInit {
  username:string;
 
   constructor(private userService: UsersService, private http:HttpClient) { 
-  this.userService.getUserProfile()
+  //this.userService.getUserProfile()
       //this.user = profile;
     //this.userService.getRepo
   }
