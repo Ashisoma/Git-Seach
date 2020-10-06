@@ -10,19 +10,14 @@ export class NavbarComponent implements OnInit {
 repos:any;
 profile:any;
 
-  constructor(private userService: UsersService) {
-    {
-      this.userService = userService
-    }
+  constructor() {
+   
    }
 
-   getRepo(){}
+   
 
   ngOnInit(): void {
-    this.userService.getRepo().subscribe((repos:any)=>{
-      console.log(repos);
-      this.repos = repos
-    })
+   
 
   }
 
