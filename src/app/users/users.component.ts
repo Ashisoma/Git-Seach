@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { UsersService } from 'src/app/users.service'
 import { HttpClient } from '@angular/common/http';
-import { Profile, Repo } from '../profile';
-import { profile } from 'console';
+// import { Profile, Repo } from '../profile';
+// import { profile } from 'console';
 
 
 
