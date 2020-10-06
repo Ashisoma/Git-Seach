@@ -24,10 +24,7 @@ this.username = 'Ashisoma'
 getUserProfile(){
   
   return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
-//   .toPromise().then(data =>{
-//  console.log(data);
 
-//});
 }
 
   getRepo() {
@@ -35,7 +32,7 @@ getUserProfile(){
     return this.http.get(url);
 }
    updateProfile(username:string){
-     this.username = username
+     this.username = username;
    }
  }
  //return this.http.get('https://api.github.com/search/users?access_token=e3a1b33c1d6d6b20e6ef2b7ce2de6985091c91b6&q=Ashisoma')

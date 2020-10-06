@@ -9,12 +9,16 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 //import { from } from 'rxjs';
 import { UsersComponent } from './users/users.component';
+import { RepositoriesComponent } from './repositories/repositories.component';
+import { NavbarComponent } from './navbar/navbar.component';
  
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    RepositoriesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
