@@ -10,8 +10,9 @@
 
     <div *ngIf="profile" class="card-group" style="display: flex;">
         <div class="card" >
-            <div class="card-body" style="float: right">
+            <div class="card-body" style="float: right" >
                 <h5 class="card-title"><b>PROFILE</b></h5>
+                <!-- <div *ngFor= "let profile of profile"> -->
                 <img class="card-img-top" src="{{ profile.avatar_url }}"
                     style="border-radius: 100%; width: 15em; height: 15em; float: left" responsive />
                 <div>
@@ -28,6 +29,7 @@
                 <p>
                     <a href="{{ profile.html_url }}" target="blank" class="btn btn-primary">View profile on Github</a>
                 </p>
+              
             </div>
         </div>
         <div class="card">

@@ -38,7 +38,7 @@ export class UsersComponent implements OnInit {
     this.userService.updateProfile(this.username);
     this.userService.getUserProfile().subscribe((profile:any[])=>{
       console.log(profile);
-      this.repos = profile;
+      this.profile = profile;
     });
     this.userService.getRepo().subscribe((repos:any[])=>{
       console.log(repos);
